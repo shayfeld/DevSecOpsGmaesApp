@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tic-Tac-Toe</title>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{{ url_for('static', filename='css/tictactoe_style.css') }}" />
+  </head>
+  <body>
+    <div class="game-container">
+      <h1>Tic-Tac-Toe</h1>
+      <div class="board" id="gameBoard">
+        <!-- Cells will be dynamically created by JavaScript -->
+      </div>
+      <button id="resetBtn">Reset Game</button>
+      <div id="status">Player X's Turn</div>
+    </div>
+    <script src="{{ url_for('static', filename='js/tictactoe.js') }}"></script>
+  </body>
+</html>

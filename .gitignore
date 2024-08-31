@@ -1,0 +1,12 @@
+# Virtual environment
+venv/
+.env/
+
+# Dependency directories
+lib/
+lib64/
+
+# Dependency directories
+Scripts/
+
+pyvenv.cfg

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Main Menu</title>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{{ url_for('static', filename='css/main_style.css') }}" />
+  </head>
+  <body>
+    <div class="menu-container">
+      <h1>Game Menu</h1>
+      <div class="button-container">
+        <a href="{{ url_for('snake') }}" class="menu-button">Snake</a>
+        <a href="{{ url_for('flappy_bird') }}" class="menu-button"
+          >Flappy Bird</a
+        >
+        <a href="{{ url_for('breakout') }}" class="menu-button">Breakout</a>
+        <a href="{{ url_for('tictactoe') }}" class="menu-button">Tic-Tac-Toe</a>
+        <a href="{{ url_for('pong') }}" class="menu-button">Pong</a>
+      </div>
+    </div>
+  </body>
+</html>

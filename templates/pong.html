@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pong Game</title>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{{ url_for('static', filename='css/pong_style.css') }}" />
+  </head>
+  <body>
+    <div class="game-container">
+      <canvas id="gameCanvas"></canvas>
+      <div class="score" id="score">0 - 0</div>
+      <div class="center-container">
+        <div id="winnerMessage" class="hidden">Player X Wins!</div>
+        <div class="button-container">
+          <button id="startBtn">Start</button>
+          <button id="restartBtn" class="hidden">Restart</button>
+        </div>
+      </div>
+    </div>
+    <script src="{{ url_for('static', filename='js/pong.js') }}"></script>
+  </body>
+</html>

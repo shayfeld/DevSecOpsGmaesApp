@@ -1,0 +1,47 @@
+/* static/css/style.css */
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background-color: #f0f0f0;
+}
+
+canvas {
+  background-color: #eee;
+  display: block;
+  border: 1px solid black;
+}
+
+.game-container {
+  position: relative;
+}
+
+.score {
+  font-size: 20px;
+  color: #000;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+
+button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 10px 20px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 16px;
+  display: block; /* Ensure the button is visible */
+}
+
+button:hover {
+  background-color: #45a049;
+}
