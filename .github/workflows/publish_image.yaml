@@ -1,15 +1,24 @@
-name: Publish image to docker hub
+name: Publish image to Docker Hub
+
 on:
   [workflow_dispatch]
 
 jobs:
   publish_image:
     runs-on: ubuntu-latest
-    - name: checkout
+
+    steps:
+    - name: Checkout code
       uses: actions/checkout@v3
-    - name: build
+
+    - name: Build Docker image
       run: |
         docker build . -t shayfeld/devsecopsgames:latest
-    - name: publish
+
+    - name: Log in to Docker Hub
+      run: |
+        echo "${{ secrets.DOCKER_HUB_TOKEN }}" | docker login -u shayfeld --password-stdin
+
+    - name: Push Docker image
       run: |
         docker push shayfeld/devsecopsgames:latest
